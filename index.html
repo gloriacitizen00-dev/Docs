@@ -4,31 +4,52 @@
   <meta charset="UTF-8">
   <title>Portafolio de Gloria</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 30px;
+    }
+    .galeria img {
+      width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
 </head>
-  
+
 <body>
-  
+
   <h1>Proyecto Canva</h1>
 
+  <!-- PDF Viewer -->
   <canvas id="pdf-render"></canvas>
   <button id="prev-page">Anterior</button>
   <button id="next-page">Siguiente</button>
   <p>Página: <span id="page-num"></span> / <span id="page-count"></span></p>
-  
+
+  <!-- Enlace a Canva -->
   <p>
     <a href="https://savenatureincr.my.canva.site" target="_blank" rel="noopener noreferrer">
       Ver libro de pintar en Canva
     </a>
   </p>
 
+  <!-- Botón de descarga PDF -->
   <h2>Libro-pintar (PDF)</h2>
   <p>
-    <a href="Libro-pintar.pdf" target="_blank">
+    <a href="Portada-animales.pdf" target="_blank">
       Descargar libro de pintar en PDF
     </a>
   </p>
 
-  <!-- 🔹 Galería de imágenes -->
+  <!-- Galería de imágenes -->
   <h2>Galería de imágenes</h2>
   <div class="galeria">
     <img src="1.jpg" alt="Imagen 1">
@@ -41,22 +62,14 @@
     <img src="8.jpg" alt="Imagen 8">
     <img src="9.jpg" alt="Imagen 9">
     <img src="10.jpg" alt="Imagen 10">
+    <img src="11.jpg" alt="Imagen 11">
+    <img src="12.jpg" alt="Imagen 12">
   </div>
 
-  <style>
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 10px;
-      margin-top: 20px;
-    }
-    .galeria img {
-      width: 100%;
-      height: auto;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-  </style>
+  <!-- PDF.js script (puedes completarlo luego si lo usas) -->
+  <script>
+    // Aquí puedes agregar tu lógica para mostrar el PDF si lo necesitas
+  </script>
 
 </body>
 </html>
