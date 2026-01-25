@@ -3,33 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <title>Portafolio de Gloria</title>
+  <style>
+    body { font-family: Arial; text-align:center; margin:20px; }
+    canvas { border:1px solid #333; margin-bottom:10px; }
+    button { margin:5px; padding:10px 15px; font-size:16px; cursor:pointer; }
+  </style>
 </head>
-  
 <body>
-  
+
   <h1>Proyecto Canva</h1>
-  
+
+  <!-- Contenedor del PDF -->
+  <canvas id="pdf-render"></canvas>
+
+  <!-- Botones -->
+  <div>
+    <button id="prev-page">⬅ Anterior</button>
+    <button id="next-page">Siguiente ➡</button>
+  </div>
+
+  <p>Página: <span id="page-num">1</span> / <span id="page-count">8</span></p>
+
   <p>
     <a href="https://savenatureincr.my.canva.site" target="_blank" rel="noopener noreferrer">
       Ver libro de pintar en Canva
     </a>
   </p>
 
- 
- <h2>Libro-pintar (PDF)</h2>
-
   <p>
-    <a href="Libro-pintar.pdf" target="_blank">
-      Descargar ibro de pintar en PDF
-  </a>
- </p>
-  
-    <iframe>
-      src="Libro-pintar.pdf" 
-      width="100%"
-      height="600px">
-      style="border:1px solid #ccc;">
-    </iframe>
-  
+    <a href="Libro-pintar.pdf" target="_blank">Descargar libro de pintar en PDF</a>
+  </p>
+
+  <!-- PDF.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.min.js"></script>
+
+  <!-- Script para mostrar PDF -->
+  <script>
+    // URL de tu PDF
+    const url = 'https://gloriacitizen00-dev.github.io/Docs/Libro-pintar.pdf';
+
+    // Variables
+    let pdfDoc = null;
+    let pageNum = 1;
+    let canvas = document.getElementById('pdf-render');
+    let ctx = canvas.getContext('2d');
+
+    // Cargar PDF
+    pdfjsLib.getDocument(url).promise.then(doc => {
+      pdfDoc = doc;
+      document.getElementById('page-count').textContent = pdfDoc.numPages;
+      renderPage(pageNum);
+    });
+
+    // Renderizar página
+    function renderPage(num) {
+      pdfDoc.getPage(num).then(page => {
+        const viewport = page.getViewport({ scale: 1.5 });
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
+        const renderCtx = { canvasContext: ctx, viewport: viewport };
+        page.render(renderCtx);
+        document.getElementById('page-num').textContent = num;
+      });
+    }
+
+    // Botones
+    document.getElementById('prev-page').addEventListener('click', () => {
+      if (pageNum <= 1) return;
+      pageNum--;
+      renderPage(pageNum);
+    });
+
+    document.getElementById('next-page').addEventListener('click', () => {
+      if (pageNum >= pdfDoc.numPages) return;
+      pageNum++;
+      renderPage(pageNum);
+    });
+  </script>
+
 </body>
 </html>
