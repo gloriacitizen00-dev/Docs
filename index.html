@@ -2,112 +2,91 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Portafolio de Gloria</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Libro para Pintar - Animales</title>
   <style>
-    body { font-family: Arial; text-align:center; margin:20px; }
-    canvas { border:1px solid #333; margin-bottom:10px; }
-    button { margin:5px; padding:10px 15px; font-size:16px; cursor:pointer; }
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    .galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-    margin-top: 20px;
-  }
-  .galeria img {
-    width: 100%;
-    border-radius: 8px;
-  }
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f5f5f5;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    /* Portada a pantalla completa */
+    .cover {
+      max-width: 90%;
+      max-height: 80vh;
+      object-fit: contain;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      margin-bottom: 30px;
+      transition: transform 0.3s;
+    }
+
+    .cover:hover {
+      transform: scale(1.02);
+    }
+
+    /* Botones debajo de la portada */
+    .buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      padding: 14px 28px;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .buttons a:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+
+    /* Responsive para móviles */
+    @media (max-width: 600px) {
+      .cover {
+        max-height: 60vh;
+      }
+      .buttons a {
+        padding: 12px 20px;
+      }
+    }
+
   </style>
 </head>
 <body>
 
-  <h1>Proyecto Canva</h1>
-
-  <!-- Contenedor del PDF -->
-  <canvas id="pdf-render"></canvas>
+  <!-- Portada como imagen -->
+  <img src="Docs/Portada-animales-01.jpg" alt="Portada del libro Animales" class="cover">
 
   <!-- Botones -->
-  <div>
-    <button id="prev-page">⬅ Anterior</button>
-    <button id="next-page">Siguiente ➡</button>
-  </div>
-
-  <p>Página: <span id="page-num">1</span> / <span id="page-count">8</span></p>
-
-  <p>
-    <a href="https://savenatureincr.my.canva.site" target="_blank" rel="noopener noreferrer">
-      Ver libro de pintar en Canva
+  <div class="buttons">
+    <a href="https://www.canva.com/design/DIRECCION_DEL_CANVA" target="_blank">
+      Ver en Canva
     </a>
-  </p>
-
-  <p>
-    <a href="Libro-pintar.pdf" target="_blank">Descargar libro de pintar en PDF</a>
-  </p>
-<h2>Mi galería</h2> 
-<div class="galeria"> 
-<img src="1.jpg" alt="Foto 01"> 
-<img src="2.jpg" alt="Foto 02"> 
-<img src="3.jpg" alt="Foto 03"> 
-<img src="4.jpg" alt="Foto 04"> 
-<img src="5.jpg" alt="Foto 05"> 
-<img src="6.jpg" alt="Foto 06"> 
-<img src="7.jpg" alt="Foto 07"> 
-<img src="8.jpg" alt="Foto 08"> 
-<img src="9.jpg" alt="Foto 09"> 
-<img src="10.jpg" alt="Foto 10"> 
-<img src="11.jpg" alt="Foto 11"> 
-<img src="12.jpg" alt="Foto 12"> 
-</div>
-  
-
-  <!-- PDF.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.min.js"></script>
-
-  <!-- Script para mostrar PDF -->
-  <script>
-    // URL de tu PDF
-    const url = 'https://gloriacitizen00-dev.github.io/Docs/Libro-pintar.pdf';
-
-    // Variables
-    let pdfDoc = null;
-    let pageNum = 1;
-    let canvas = document.getElementById('pdf-render');
-    let ctx = canvas.getContext('2d');
-
-    // Cargar PDF
-    pdfjsLib.getDocument(url).promise.then(doc => {
-      pdfDoc = doc;
-      document.getElementById('page-count').textContent = pdfDoc.numPages;
-      renderPage(pageNum);
-    });
-
-    // Renderizar página
-    function renderPage(num) {
-      pdfDoc.getPage(num).then(page => {
-        const viewport = page.getViewport({ scale: 1.5 });
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
-
-        const renderCtx = { canvasContext: ctx, viewport: viewport };
-        page.render(renderCtx);
-        document.getElementById('page-num').textContent = num;
-      });
-    }
-
-    // Botones
-    document.getElementById('prev-page').addEventListener('click', () => {
-      if (pageNum <= 1) return;
-      pageNum--;
-      renderPage(pageNum);
-    });
-
-    document.getElementById('next-page').addEventListener('click', () => {
-      if (pageNum >= pdfDoc.numPages) return;
-      pageNum++;
-      renderPage(pageNum);
-    });
-  </script>
+    <a href="Docs/Portada-animales.pdf" download>
+      Descargar PDF
+    </a>
+  </div>
 
 </body>
 </html>
