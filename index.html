@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Portafolio de Gloria</title>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.min.js"></script>
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.min.js"></script>
 </head>
   
 <body>
@@ -15,8 +13,7 @@
   <canvas id="pdf-render"></canvas>
   <button id="prev-page">Anterior</button>
   <button id="next-page">Siguiente</button>
-  <p>Pagina: <span id="page-num"></span> / <span id="page-count"></span>span></p>
-  
+  <p>Página: <span id="page-num"></span> / <span id="page-count"></span></p>
   
   <p>
     <a href="https://savenatureincr.my.canva.site" target="_blank" rel="noopener noreferrer">
@@ -24,18 +21,42 @@
     </a>
   </p>
 
- 
- <h2>Libro-pintar (PDF)</h2>
-
+  <h2>Libro-pintar (PDF)</h2>
   <p>
     <a href="Libro-pintar.pdf" target="_blank">
-      Descargar ibro de pintar en PDF
-  </a>
- </p>
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.min.js"></script>
-    <script>
-  
-  
+      Descargar libro de pintar en PDF
+    </a>
+  </p>
+
+  <!-- 🔹 Galería de imágenes -->
+  <h2>Galería de imágenes</h2>
+  <div class="galeria">
+    <img src="1.jpg" alt="Imagen 1">
+    <img src="2.jpg" alt="Imagen 2">
+    <img src="3.jpg" alt="Imagen 3">
+    <img src="4.jpg" alt="Imagen 4">
+    <img src="5.jpg" alt="Imagen 5">
+    <img src="6.jpg" alt="Imagen 6">
+    <img src="7.jpg" alt="Imagen 7">
+    <img src="8.jpg" alt="Imagen 8">
+    <img src="9.jpg" alt="Imagen 9">
+    <img src="10.jpg" alt="Imagen 10">
+  </div>
+
+  <style>
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .galeria img {
+      width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+
 </body>
 </html>
