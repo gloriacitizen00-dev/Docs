@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Salvemos la Naturaleza</title>
+  <!-- Importar la fuente Cinzel desde Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Cinzel', serif;
-      background-color: #2e7d32;
+      background-color: #2e7d32; /* verde selva */
       color: white;
       text-align: center;
       height: 100vh;
@@ -17,7 +18,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      position: relative; /* necesario para el humo */
+      position: relative; /* necesario para humo */
       overflow: hidden;
     }
     h1 {
@@ -42,7 +43,7 @@
     .boton:hover {
       background-color: #388e3c;
     }
-    /* Efecto glow */
+    /* ✨ Efecto glow en el título */
     .glow {
       text-shadow: 0 0 10px #fff, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
       animation: pulse 2s infinite alternate;
@@ -51,21 +52,35 @@
       from { text-shadow: 0 0 5px #fff, 0 0 10px #00ffcc; }
       to { text-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc; }
     }
-    /* Efecto humo */
+    /* 💨 Efecto humo */
     .smoke {
       position: absolute;
       bottom: 20px;
       left: 20px;
-      width: 20px;
-      height: 20px;
-      background: rgba(255,255,255,0.3);
+    }
+    .smoke span {
+      position: absolute;
+      bottom: 0;
+      width: 25px;
+      height: 25px;
+      background: rgba(255,255,255,0.6);
       border-radius: 50%;
-      animation: rise 5s infinite;
+      animation: rise 6s infinite;
+    }
+    .smoke span:nth-child(2) {
+      left: 30px;
+      animation-delay: 2s;
+      background: rgba(200,200,200,0.5);
+    }
+    .smoke span:nth-child(3) {
+      left: 60px;
+      animation-delay: 4s;
+      background: rgba(180,180,180,0.4);
     }
     @keyframes rise {
-      0% { transform: translateY(0) scale(1); opacity: 0.5; }
-      50% { transform: translateY(-50px) scale(1.5); opacity: 0.3; }
-      100% { transform: translateY(-100px) scale(2); opacity: 0; }
+      0% { transform: translateY(0) scale(1); opacity: 0.7; }
+      50% { transform: translateY(-80px) scale(1.5); opacity: 0.4; }
+      100% { transform: translateY(-150px) scale(2); opacity: 0; }
     }
   </style>
 </head>
@@ -73,6 +88,12 @@
   <h1 class="glow">Aprende más de Costa Rica</h1>
   <p>Un país verde que protege su naturaleza y su futuro 🌎</p>
   <a href="https://savenatureincr.my.canva.site/" target="_blank" class="boton">Ver en Canva</a>
-  <div class="smoke"></div>
+
+  <!-- Humo -->
+  <div class="smoke">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </body>
 </html>
