@@ -2,54 +2,40 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Libro Animales</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 20px;
-    }
+  <title>Portafolio de Gloria</title>
 
-    /* Imagen de portada */
-    .cover {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto 20px auto;
-    }
-
-    /* Botones simples */
-    .buttons a {
-      display: inline-block;
-      text-decoration: none;
-      padding: 12px 24px;
-      margin: 10px;
-      background-color: #007BFF;
-      color: white;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-
-    .buttons a:hover {
-      background-color: #0056b3;
-    }
-  </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.min.js"></script>
+  
 </head>
+  
 <body>
+  
+  <h1>Proyecto Canva</h1>
 
-  <!-- Portada -->
-  <img src="Docs/Portada-animales-01.jpg" alt="Portada del libro Animales" class="cover">
-
-  <!-- Botones -->
-  <div class="buttons">
-    <a href="https://www.canva.com/design/DIRECCION_DEL_CANVA" target="_blank">
-      Ver en Canva
+  <canvas id="pdf-render"></canvas>
+  <button id="prev-page">Anterior</button>
+  <button id="next-page">Siguiente</button>
+  <p>Pagina: <span id="page-num"></span> / <span id="page-count"></span>span></p>
+  
+  
+  <p>
+    <a href="https://savenatureincr.my.canva.site" target="_blank" rel="noopener noreferrer">
+      Ver libro de pintar en Canva
     </a>
-    <a href="Docs/Portada-animales.pdf" download>
-      Descargar PDF
-    </a>
-  </div>
+  </p>
 
+ 
+ <h2>Libro-pintar (PDF)</h2>
+
+  <p>
+    <a href="Libro-pintar.pdf" target="_blank">
+      Descargar ibro de pintar en PDF
+  </a>
+ </p>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.min.js"></script>
+    <script>
+  
+  
 </body>
 </html>
