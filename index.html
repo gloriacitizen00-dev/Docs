@@ -3,80 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Libro para Pintar - Animales</title>
+  <title>Libro Animales</title>
   <style>
-    /* Reset básico */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body, html {
-      height: 100%;
+    body {
       font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #f5f5f5;
-      flex-direction: column;
       text-align: center;
+      padding: 20px;
     }
 
-    /* Portada a pantalla completa */
+    /* Imagen de portada */
     .cover {
-      max-width: 90%;
-      max-height: 80vh;
-      object-fit: contain;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-      border-radius: 10px;
-      margin-bottom: 30px;
-      transition: transform 0.3s;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto 20px auto;
     }
 
-    .cover:hover {
-      transform: scale(1.02);
-    }
-
-    /* Botones debajo de la portada */
-    .buttons {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
+    /* Botones simples */
     .buttons a {
+      display: inline-block;
       text-decoration: none;
-      padding: 14px 28px;
+      padding: 12px 24px;
+      margin: 10px;
       background-color: #007BFF;
       color: white;
-      border-radius: 6px;
+      border-radius: 5px;
       font-weight: bold;
-      transition: background-color 0.3s, transform 0.2s;
     }
 
     .buttons a:hover {
       background-color: #0056b3;
-      transform: scale(1.05);
     }
-
-    /* Responsive para móviles */
-    @media (max-width: 600px) {
-      .cover {
-        max-height: 60vh;
-      }
-      .buttons a {
-        padding: 12px 20px;
-      }
-    }
-
   </style>
 </head>
 <body>
 
-  <!-- Portada como imagen -->
-  <img src="Docs/Portada-animalesjpg" alt="Portada del libro Animales" class="cover">
+  <!-- Portada -->
+  <img src="Docs/Portada-animales-01.jpg" alt="Portada del libro Animales" class="cover">
 
   <!-- Botones -->
   <div class="buttons">
