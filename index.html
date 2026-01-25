@@ -7,6 +7,17 @@
     body { font-family: Arial; text-align:center; margin:20px; }
     canvas { border:1px solid #333; margin-bottom:10px; }
     button { margin:5px; padding:10px 15px; font-size:16px; cursor:pointer; }
+
+    .galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .galeria img {
+    width: 100%;
+    border-radius: 8px;
+  }
   </style>
 </head>
 <body>
@@ -33,6 +44,22 @@
   <p>
     <a href="Libro-pintar.pdf" target="_blank">Descargar libro de pintar en PDF</a>
   </p>
+<h2>Mi galería</h2> 
+<div class="galeria"> 
+<img src="images/01.png" alt="Foto 01"> 
+<img src="images/02.png" alt="Foto 02"> 
+<img src="images/03.png" alt="Foto 03"> 
+<img src="images/04.png" alt="Foto 04"> 
+<img src="images/05.png" alt="Foto 05"> 
+<img src="images/06.png" alt="Foto 06"> 
+<img src="images/07.png" alt="Foto 07"> 
+<img src="images/08.png" alt="Foto 08"> 
+<img src="images/09.png" alt="Foto 09">
+<img src="images/10.png" alt="Foto 10"> 
+<img src="images/11.png" alt="Foto 11"> 
+<img src="images/12.png" alt="Foto 12">
+</div>
+  
 
   <!-- PDF.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.min.js"></script>
