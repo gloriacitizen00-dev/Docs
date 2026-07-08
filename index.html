@@ -8,98 +8,933 @@
 
 <title>Explore Costa Rica | Nature, Adventure & Travel Guide</title>
 
-<meta name="description" content="Discover Costa Rica through destinations, wildlife, volcanoes, beaches, national parks and unforgettable adventures.">
+<meta name="description" content="Discover Costa Rica through volcanoes, beaches, rainforests, wildlife, national parks and unforgettable adventures.">
 
-<meta name="keywords" content="Costa Rica, Travel, Tourism, Volcanoes, Beaches, Wildlife, National Parks">
+<meta name="keywords" content="Costa Rica, travel, tourism, volcanoes, beaches, rainforest, wildlife, national parks">
 
 <meta name="author" content="Explore Costa Rica">
 
 <meta property="og:title" content="Explore Costa Rica">
-
 <meta property="og:description" content="Discover the natural paradise of Costa Rica.">
-
 <meta property="og:type" content="website">
-
 <meta property="og:image" content="images/hero/hero.jpg">
-
 <meta property="og:url" content="https://yourdomain.com">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/style.css">
+<style>
+
+/*=========================
+RESET
+=========================*/
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+
+--green:#2E7D32;
+--green-dark:#1B5E20;
+--green-light:#66BB6A;
+--green-soft:#F3FAF3;
+
+--text:#111;
+--text-light:#555;
+
+--white:#fff;
+
+--border:#D9E9D9;
+
+--shadow:0 20px 50px rgba(46,125,50,.10);
+
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#ffffff;
+
+font-family:'Montserrat',sans-serif;
+
+color:var(--text);
+
+line-height:1.7;
+
+}
+
+/*=========================
+TOP BAR
+=========================*/
+
+.topbar{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:80px;
+
+background:#fff;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:0 40px;
+
+border-bottom:1px solid var(--border);
+
+z-index:9999;
+
+box-shadow:0 5px 20px rgba(0,0,0,.04);
+
+}
+
+.topbar-left{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.brand{
+
+font-family:"Cinzel",serif;
+
+font-size:28px;
+
+color:var(--green);
+
+font-weight:bold;
+
+letter-spacing:2px;
+
+}
+
+.projects-header{
+
+font-size:12px;
+
+letter-spacing:3px;
+
+color:#888;
+
+text-transform:uppercase;
+
+}
+
+/*=========================
+MENU
+=========================*/
+
+.menu{
+
+display:flex;
+
+align-items:center;
+
+gap:24px;
+
+}
+
+.menu-item{
+
+position:relative;
+
+}
+
+.menu-button{
+
+background:none;
+
+border:none;
+
+font-size:14px;
+
+font-weight:600;
+
+cursor:pointer;
+
+color:#111;
+
+transition:.3s;
+
+}
+
+.menu-button:hover{
+
+color:var(--green);
+
+}
+
+.menu-link{
+
+text-decoration:none;
+
+font-weight:600;
+
+color:#111;
+
+transition:.3s;
+
+}
+
+.menu-link:hover{
+
+color:var(--green);
+
+}
+
+/*=========================
+DROPDOWN
+=========================*/
+
+.dropdown{
+
+position:absolute;
+
+top:100%;
+
+left:0;
+
+display:none;
+
+flex-direction:column;
+
+min-width:260px;
+
+background:#fff;
+
+border-radius:18px;
+
+padding:15px;
+
+border:1px solid var(--border);
+
+box-shadow:var(--shadow);
+
+gap:12px;
+
+}
+
+.menu-item:hover .dropdown{
+
+display:flex;
+
+}
+
+.dropdown-button{
+
+display:block;
+
+padding:14px;
+
+background:var(--green);
+
+color:#fff;
+
+text-decoration:none;
+
+border-radius:12px;
+
+font-weight:bold;
+
+text-align:center;
+
+transition:.3s;
+
+}
+
+.dropdown-button:hover{
+
+background:var(--green-dark);
+
+transform:translateY(-2px);
+
+}
+
+/*=========================
+MAIN
+=========================*/
+
+.desktop{
+
+max-width:1300px;
+
+margin:auto;
+
+padding-top:130px;
+
+padding-left:20px;
+
+padding-right:20px;
+
+}
+
+/*=========================
+HERO
+=========================*/
+
+.hero{
+
+text-align:center;
+
+padding:90px 20px 100px;
+
+}
+
+.hero-logo-container{
+
+width:340px;
+
+height:340px;
+
+margin:auto;
+
+border-radius:50%;
+
+background:#fff;
+
+border:5px solid var(--green);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+box-shadow:
+
+0 0 0 10px rgba(46,125,50,.10),
+
+0 30px 60px rgba(46,125,50,.18);
+
+}
+
+.hero-logo{
+
+width:85%;
+
+transition:.4s;
+
+}
+
+.hero-logo:hover{
+
+transform:scale(1.05);
+
+}
+
+.hero h1{
+
+font-family:"Cinzel",serif;
+
+font-size:58px;
+
+color:var(--green);
+
+margin-top:35px;
+
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+max-width:820px;
+
+margin:auto;
+
+font-size:20px;
+
+color:#555;
+
+}
+
+.hero-buttons{
+
+margin-top:40px;
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+display:inline-block;
+
+padding:16px 34px;
+
+background:var(--green);
+
+color:white;
+
+text-decoration:none;
+
+border-radius:12px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+background:var(--green-dark);
+
+transform:translateY(-3px);
+
+}
+
+.btn.secondary{
+
+background:#fff;
+
+color:var(--green);
+
+border:2px solid var(--green);
+
+}
+
+.btn.secondary:hover{
+
+background:var(--green);
+
+color:#fff;
+
+}
+
+/*=========================
+SECTION TITLES
+=========================*/
+
+.section-title{
+
+font-family:"Cinzel",serif;
+
+font-size:42px;
+
+color:var(--green);
+
+margin-bottom:25px;
+
+text-align:center;
+
+}
+
+.section-subtitle{
+
+max-width:850px;
+
+margin:auto;
+
+text-align:center;
+
+color:#555;
+
+margin-bottom:60px;
+
+}
+
+/*=========================
+CARDS
+=========================*/
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+margin-top:50px;
+
+}
+
+.card{
+
+background:#fff;
+
+border-radius:20px;
+
+padding:35px;
+
+box-shadow:var(--shadow);
+
+transition:.3s;
+
+border:1px solid var(--border);
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+border-radius:14px;
+
+margin-bottom:20px;
+
+}
+
+.card h3{
+
+font-size:24px;
+
+margin-bottom:15px;
+
+color:var(--green);
+
+font-family:"Cormorant Garamond",serif;
+
+}
+
+.card p{
+
+color:#555;
+
+}
+
+/*=========================
+GALLERY
+=========================*/
+
+.gallery{
+
+margin-top:100px;
+
+padding:80px 40px;
+
+background:linear-gradient(to bottom,#ffffff,#F4FBF4);
+
+border-top:1px solid var(--border);
+
+border-bottom:1px solid var(--border);
+
+}
+
+.gallery-track{
+
+display:flex;
+
+gap:25px;
+
+overflow-x:auto;
+
+padding-bottom:10px;
+
+scrollbar-width:none;
+
+}
+
+.gallery-track::-webkit-scrollbar{
+
+display:none;
+
+}
+
+.gallery-track img{
+
+width:320px;
+
+height:420px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+border:2px solid var(--green);
+
+box-shadow:var(--shadow);
+
+transition:.3s;
+
+}
+
+.gallery-track img:hover{
+
+transform:scale(1.03);
+
+}
+
+/*=========================
+ABOUT
+=========================*/
+
+.about{
+
+padding:100px 0;
+
+}
+
+.about-card{
+
+background:#fff;
+
+padding:45px;
+
+border-radius:20px;
+
+box-shadow:var(--shadow);
+
+border:1px solid var(--border);
+
+max-width:950px;
+
+margin:auto;
+
+}
+
+.about-card p{
+
+font-size:18px;
+
+color:#444;
+
+}
+
+/*=========================
+FOOTER
+=========================*/
+
+.site-footer{
+
+margin-top:100px;
+
+background:var(--green-dark);
+
+padding:70px 20px;
+
+color:white;
+
+}
+
+.footer-inner{
+
+max-width:1200px;
+
+margin:auto;
+
+display:flex;
+
+justify-content:space-between;
+
+gap:50px;
+
+flex-wrap:wrap;
+
+}
+
+.footer-brand h3{
+
+font-family:"Cinzel",serif;
+
+font-size:30px;
+
+color:#A5D6A7;
+
+margin-bottom:15px;
+
+}
+
+.footer-links a{
+
+display:block;
+
+color:#F1F8F1;
+
+text-decoration:none;
+
+margin-bottom:10px;
+
+transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+color:#A5D6A7;
+
+}
+
+.footer-info p{
+
+margin-bottom:10px;
+
+}
+
+/*=========================
+RESPONSIVE
+=========================*/
+
+@media(max-width:900px){
+
+.topbar{
+
+flex-direction:column;
+
+height:auto;
+
+padding:20px;
+
+gap:20px;
+
+}
+
+.menu{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.desktop{
+
+padding-top:180px;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero-logo-container{
+
+width:250px;
+
+height:250px;
+
+}
+
+.section-title{
+
+font-size:34px;
+
+}
+
+.gallery-track img{
+
+width:240px;
+
+height:320px;
+
+}
+
+}
+
+</style>
 
 </head>
 
-<body>
+  <body>
 
-<header>
+<header class="topbar">
 
-<nav class="navbar">
+    <div class="topbar-left">
+        <div class="brand">
+            Explore Costa Rica
+        </div>
 
-<div class="logo">
+        <div class="projects-header">
+            OFFICIAL TRAVEL GUIDE
+        </div>
+    </div>
 
-Explore Costa Rica
+    <nav class="menu">
 
-</div>
+        <a href="#" class="menu-link">Home</a>
 
-<ul class="nav-links">
+        <div class="menu-item">
 
-<li><a href="#">Destinations</a></li>
+            <button class="menu-button">
+                Destinations ▼
+            </button>
 
-<li><a href="#">Nature</a></li>
+            <div class="dropdown">
 
-<li><a href="#">Experiences</a></li>
+                <a href="#" class="dropdown-button">National Parks</a>
 
-<li><a href="#">Travel Guide</a></li>
+                <a href="#" class="dropdown-button">Volcanoes</a>
 
-<li><a href="#">Blog</a></li>
+                <a href="#" class="dropdown-button">Beaches</a>
 
-<li><a href="#">Contact</a></li>
+                <a href="#" class="dropdown-button">Cloud Forests</a>
 
-</ul>
+                <a href="#" class="dropdown-button">Waterfalls</a>
 
-</nav>
+            </div>
+
+        </div>
+
+        <div class="menu-item">
+
+            <button class="menu-button">
+                Nature ▼
+            </button>
+
+            <div class="dropdown">
+
+                <a href="#" class="dropdown-button">Wildlife</a>
+
+                <a href="#" class="dropdown-button">Bird Watching</a>
+
+                <a href="#" class="dropdown-button">Marine Life</a>
+
+                <a href="#" class="dropdown-button">Rainforests</a>
+
+            </div>
+
+        </div>
+
+        <div class="menu-item">
+
+            <button class="menu-button">
+                Adventure ▼
+            </button>
+
+            <div class="dropdown">
+
+                <a href="#" class="dropdown-button">Ziplining</a>
+
+                <a href="#" class="dropdown-button">Rafting</a>
+
+                <a href="#" class="dropdown-button">Surfing</a>
+
+                <a href="#" class="dropdown-button">Hiking</a>
+
+                <a href="#" class="dropdown-button">Scuba Diving</a>
+
+            </div>
+
+        </div>
+
+        <a href="#" class="menu-link">Travel Guide</a>
+
+        <a href="#" class="menu-link">Hotels</a>
+
+        <a href="#" class="menu-link">Contact</a>
+
+    </nav>
 
 </header>
 
-<main>
+<main class="desktop">
 
 <section class="hero">
 
-<div class="overlay">
+<div class="hero-logo-container">
 
-<h1>Explore Costa Rica</h1>
+<img
+src="images/logo.png"
+class="hero-logo"
+alt="Explore Costa Rica Logo">
+
+</div>
+
+<h1>
+
+Explore Costa Rica
+
+</h1>
 
 <p>
 
-Discover one of the most biodiverse countries on Earth.
+Welcome to one of the most biodiverse countries on Earth.
+Discover volcanoes, tropical rainforests, Caribbean and Pacific beaches,
+national parks, incredible wildlife and unforgettable adventures.
 
 </p>
 
 <div class="hero-buttons">
 
-<a href="#" class="btn">Explore</a>
+<a href="#" class="btn">
 
-<a href="#" class="btn secondary">Plan Your Trip</a>
+Start Exploring
 
-</div>
+</a>
+
+<a href="#" class="btn secondary">
+
+Plan Your Trip
+
+</a>
 
 </div>
 
 </section>
 
-<section class="intro">
+<section class="about">
 
-<div class="container">
+<h2 class="section-title">
 
-<h2>Where Nature Comes Alive</h2>
+Why Visit Costa Rica?
+
+</h2>
+
+<p class="section-subtitle">
+
+Costa Rica protects nearly thirty percent of its territory through national
+parks and biological reserves. Whether you dream of hiking volcanoes,
+watching sea turtles, relaxing on white-sand beaches or exploring tropical
+rainforests, every journey becomes an unforgettable experience.
+
+</p>
+
+<div class="about-card">
 
 <p>
 
-From volcanoes and cloud forests to tropical beaches and extraordinary wildlife, Costa Rica offers unforgettable experiences for every traveler.
+Costa Rica is internationally recognized as one of the world's premier
+ecotourism destinations. Despite covering only a tiny fraction of the
+planet's land area, it shelters an extraordinary percentage of global
+biodiversity.
+
+Visitors can experience active volcanoes, cloud forests, pristine beaches,
+mangroves, coral reefs, rivers and mountain ranges all within a few hours of
+travel.
+
+The country's commitment to conservation, sustainability and renewable
+energy has made it a model for responsible tourism while offering visitors
+safe, authentic and memorable adventures.
 
 </p>
 
@@ -107,37 +942,669 @@ From volcanoes and cloud forests to tropical beaches and extraordinary wildlife,
 
 </section>
 
-<section class="cards">
+<section>
+
+<h2 class="section-title">
+
+Costa Rica at a Glance
+
+</h2>
+
+<p class="section-subtitle">
+
+Some incredible facts that make Costa Rica one of the most fascinating travel
+destinations in the world.
+
+</p>
+
+<div class="cards">
 
 <div class="card">
 
-<h3>🌋 Volcanoes</h3>
+<h3>🌿 6%</h3>
 
-<p>Explore breathtaking volcanic landscapes.</p>
+<p>
+
+Home to nearly six percent of the world's biodiversity.
+
+</p>
 
 </div>
 
 <div class="card">
 
-<h3>🦥 Wildlife</h3>
+<h3>🌋 30+</h3>
 
-<p>Meet sloths, monkeys and tropical birds.</p>
+<p>
 
-</div>
+National Parks and protected biological reserves.
 
-<div class="card">
-
-<h3>🏖 Beaches</h3>
-
-<p>Pacific and Caribbean adventures await.</p>
+</p>
 
 </div>
 
 <div class="card">
 
-<h3>🌿 National Parks</h3>
+<h3>🦥 900+</h3>
 
-<p>Protected ecosystems full of biodiversity.</p>
+<p>
+
+Bird species and extraordinary wildlife.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🏖 Two Oceans</h3>
+
+<p>
+
+Pacific Ocean and Caribbean Sea in a single country.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+
+Discover Costa Rica
+
+</h2>
+
+<p class="section-subtitle">
+
+Choose your next adventure through some of the country's most spectacular
+natural attractions.
+
+</p>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="images/cards/volcano.jpg" alt="Arenal Volcano">
+
+<h3>Volcanoes</h3>
+
+<p>
+
+Discover majestic volcanoes including Arenal, Poás, Irazú and Rincón de la
+Vieja.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="images/cards/beach.jpg" alt="Costa Rica Beaches">
+
+<h3>Beaches</h3>
+
+<p>
+
+From Caribbean paradise to Pacific sunsets, explore hundreds of spectacular
+beaches.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="images/cards/wildlife.jpg" alt="Wildlife">
+
+<h3>Wildlife</h3>
+
+<p>
+
+Meet sloths, monkeys, toucans, scarlet macaws, sea turtles and countless
+other species.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="images/cards/forest.jpg" alt="Rainforest">
+
+<h3>Rainforests</h3>
+
+<p>
+
+Walk through lush tropical forests filled with waterfalls, rivers and exotic
+plants.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+  <section>
+
+    <h2 class="section-title">
+        Unforgettable Experiences
+    </h2>
+
+    <p class="section-subtitle">
+        Every region of Costa Rica offers unique adventures, from volcanoes and
+        cloud forests to world-class surfing and wildlife encounters.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <img src="images/experiences/zipline.jpg"
+                 alt="Zipline Adventure">
+
+            <h3>Ziplining</h3>
+
+            <p>
+                Fly above the rainforest canopy and experience breathtaking
+                panoramic views.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="images/experiences/surf.jpg"
+                 alt="Surfing">
+
+            <h3>Surfing</h3>
+
+            <p>
+                Costa Rica is home to some of the world's best surf beaches
+                for beginners and professionals alike.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="images/experiences/rafting.jpg"
+                 alt="White Water Rafting">
+
+            <h3>Rafting</h3>
+
+            <p>
+                Navigate exciting rivers through lush tropical landscapes
+                with experienced local guides.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="images/experiences/hiking.jpg"
+                 alt="Hiking">
+
+            <h3>Hiking</h3>
+
+            <p>
+                Explore volcanoes, waterfalls and cloud forests through
+                hundreds of scenic trails.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section>
+
+<h2 class="section-title">
+
+Featured National Parks
+
+</h2>
+
+<p class="section-subtitle">
+
+Costa Rica protects nearly one third of its territory through national parks
+and biological reserves, making it one of the world's leading ecotourism
+destinations.
+
+</p>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="images/parks/manuel-antonio.jpg"
+alt="Manuel Antonio National Park">
+
+<h3>
+
+Manuel Antonio
+
+</h3>
+
+<p>
+
+White-sand beaches, rainforest trails and abundant wildlife including sloths,
+capuchin monkeys and toucans.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="images/parks/corcovado.jpg"
+alt="Corcovado National Park">
+
+<h3>
+
+Corcovado
+
+</h3>
+
+<p>
+
+Often described as one of the most biologically intense places on Earth,
+home to jaguars, tapirs and scarlet macaws.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="images/parks/tortuguero.jpg"
+alt="Tortuguero National Park">
+
+<h3>
+
+Tortuguero
+
+</h3>
+
+<p>
+
+Explore canals surrounded by rainforest and witness one of the world's most
+important sea turtle nesting sites.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="images/parks/monteverde.jpg"
+alt="Monteverde Cloud Forest">
+
+<h3>
+
+Monteverde
+
+</h3>
+
+<p>
+
+Walk above the clouds through hanging bridges and discover extraordinary
+plants and wildlife.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2 class="section-title">
+
+The Great Volcanoes
+
+</h2>
+
+<p class="section-subtitle">
+
+Costa Rica's volcanic mountain ranges have shaped the country's landscapes,
+ecosystems and geothermal wonders.
+
+</p>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="images/volcanoes/arenal.jpg"
+alt="Arenal Volcano">
+
+<h3>
+
+Arenal Volcano
+
+</h3>
+
+<p>
+
+One of the world's most iconic volcanoes, surrounded by hot springs,
+rainforest and adventure activities.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="images/volcanoes/poas.jpg"
+alt="Poas Volcano">
+
+<h3>
+
+Poás Volcano
+
+</h3>
+
+<p>
+
+Visit one of the largest active volcanic craters on the planet, famous for
+its turquoise acidic lake.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="images/volcanoes/irazu.jpg"
+alt="Irazu Volcano">
+
+<h3>
+
+Irazú Volcano
+
+</h3>
+
+<p>
+
+On clear days visitors can admire both the Pacific Ocean and Caribbean Sea
+from the summit.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="images/volcanoes/rincon.jpg"
+alt="Rincon de la Vieja">
+
+<h3>
+
+Rincón de la Vieja
+
+</h3>
+
+<p>
+
+Discover bubbling mud pots, waterfalls, volcanic fumaroles and beautiful
+hiking trails.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="gallery">
+
+<h2 class="section-title">
+
+Costa Rica Gallery
+
+</h2>
+
+<p class="section-subtitle">
+
+A glimpse of the incredible landscapes waiting for you.
+
+</p>
+
+<div class="gallery-track">
+
+<img src="images/gallery/gallery1.jpg" alt="Rainforest">
+
+<img src="images/gallery/gallery2.jpg" alt="Beach">
+
+<img src="images/gallery/gallery3.jpg" alt="Volcano">
+
+<img src="images/gallery/gallery4.jpg" alt="Toucan">
+
+<img src="images/gallery/gallery5.jpg" alt="Waterfall">
+
+<img src="images/gallery/gallery6.jpg" alt="Sloth">
+
+<img src="images/gallery/gallery7.jpg" alt="Cloud Forest">
+
+<img src="images/gallery/gallery8.jpg" alt="Sunset">
+
+</div>
+
+</section>
+
+  <section>
+
+<h2 class="section-title">
+
+The Best Beaches
+
+</h2>
+
+<p class="section-subtitle">
+
+Whether you seek surfing, relaxation or tropical scenery, Costa Rica offers
+some of the world's most spectacular coastlines.
+
+</p>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="images/beaches/tamarindo.jpg" alt="Tamarindo Beach">
+
+<h3>Tamarindo</h3>
+
+<p>
+
+One of Costa Rica's most famous beach towns, perfect for surfing,
+restaurants and nightlife.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="images/beaches/conchal.jpg" alt="Playa Conchal">
+
+<h3>Playa Conchal</h3>
+
+<p>
+
+Crystal-clear waters and white shells make this beach one of the country's
+most beautiful destinations.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="images/beaches/santa-teresa.jpg" alt="Santa Teresa">
+
+<h3>Santa Teresa</h3>
+
+<p>
+
+A paradise for surfers, digital nomads and visitors looking for spectacular
+Pacific sunsets.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="images/beaches/puerto-viejo.jpg" alt="Puerto Viejo">
+
+<h3>Puerto Viejo</h3>
+
+<p>
+
+Experience the Caribbean side of Costa Rica with vibrant culture, wildlife
+and beautiful beaches.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+
+Extraordinary Wildlife
+
+</h2>
+
+<p class="section-subtitle">
+
+Costa Rica is home to thousands of fascinating species that thrive in its
+protected ecosystems.
+
+</p>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="images/wildlife/sloth.jpg" alt="Sloth">
+
+<h3>Sloths</h3>
+
+<p>
+
+Meet Costa Rica's most beloved animal while exploring the rainforest.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="images/wildlife/toucan.jpg" alt="Toucan">
+
+<h3>Toucans</h3>
+
+<p>
+
+Their colorful beaks have become one of the country's most recognizable
+symbols.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="images/wildlife/macaw.jpg" alt="Scarlet Macaw">
+
+<h3>Scarlet Macaws</h3>
+
+<p>
+
+These magnificent birds fill Costa Rica's skies with brilliant colors.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="images/wildlife/turtle.jpg" alt="Sea Turtle">
+
+<h3>Sea Turtles</h3>
+
+<p>
+
+Witness unforgettable nesting events along both the Caribbean and Pacific
+coasts.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="about">
+
+<h2 class="section-title">
+
+Plan Your Next Adventure
+
+</h2>
+
+<div class="about-card">
+
+<p>
+
+Costa Rica offers experiences for every traveler. Whether you're searching
+for adventure, relaxation, photography, wildlife, gastronomy or sustainable
+tourism, you'll discover unforgettable destinations across every region of
+the country.
+
+Explore volcanoes, hike through cloud forests, kayak in tropical canals,
+observe exotic wildlife and enjoy warm hospitality while supporting one of
+the world's leading conservation success stories.
+
+</p>
+
+<div class="hero-buttons" style="margin-top:35px;">
+
+<a href="#" class="btn">
+
+Start Planning
+
+</a>
+
+<a href="#" class="btn secondary">
+
+View Destinations
+
+</a>
+
+</div>
 
 </div>
 
@@ -145,13 +1612,71 @@ From volcanoes and cloud forests to tropical beaches and extraordinary wildlife,
 
 </main>
 
-<footer>
+<footer class="site-footer">
+
+<div class="footer-inner">
+
+<div class="footer-brand">
+
+<h3>
+
+Explore Costa Rica
+
+</h3>
 
 <p>
 
-© 2026 Explore Costa Rica
+Your complete guide to discovering the natural wonders of Costa Rica.
 
 </p>
+
+</div>
+
+<div class="footer-links">
+
+<h4 style="margin-bottom:15px;">Explore</h4>
+
+<a href="#">Destinations</a>
+
+<a href="#">National Parks</a>
+
+<a href="#">Volcanoes</a>
+
+<a href="#">Beaches</a>
+
+<a href="#">Wildlife</a>
+
+<a href="#">Travel Guide</a>
+
+</div>
+
+<div class="footer-info">
+
+<h4 style="margin-bottom:15px;">Travel Information</h4>
+
+<p>Best Time to Visit</p>
+
+<p>Transportation</p>
+
+<p>Hotels</p>
+
+<p>Tours</p>
+
+<p>Adventure Activities</p>
+
+</div>
+
+</div>
+
+<div style="text-align:center;margin-top:60px;border-top:1px solid rgba(255,255,255,.15);padding-top:25px;">
+
+<p>
+
+© 2026 Explore Costa Rica · Discover Nature, Adventure & Sustainability
+
+</p>
+
+</div>
 
 </footer>
 
