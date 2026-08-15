@@ -6,16 +6,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Explore Costa Rica | Nature, Adventure & Travel Guide</title>
+<title>Atlas de Costa Rica | Nature, Culture & History</title>
 
-<meta name="description" content="Discover Costa Rica through volcanoes, beaches, rainforests, wildlife, national parks and unforgettable adventures.">
+<meta name="description" content="Explore Costa Rica through its regions, landscapes, nature, culture, history and places. A digital atlas of Costa Rica.">
 
-<meta name="keywords" content="Costa Rica, travel, tourism, volcanoes, beaches, rainforest, wildlife, national parks">
+<meta name="keywords" content="Costa Rica, atlas, regions, nature, culture, history, beaches, volcanoes, national parks, wildlife">
 
-<meta name="author" content="Explore Costa Rica">
+<meta name="author" content="Atlas de Costa Rica">
+
 <link rel="icon" type="image/png" href="favicon.jpg">
-<meta property="og:title" content="Explore Costa Rica">
-<meta property="og:description" content="Discover the natural paradise of Costa Rica.">
+
+<meta property="og:title" content="Atlas de Costa Rica">
+<meta property="og:description" content="Explore Costa Rica through its regions, nature, culture and history.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="images/hero/hero.jpg">
 <meta property="og:url" content="https://yourdomain.com">
@@ -700,8 +702,40 @@ margin-bottom:10px;
 }
 
 /*=========================
-RESPONSIVE
+DEVELOPMENT BANNER
 =========================*/
+
+.development-banner{
+
+background:#E8F5E9;
+
+color:#1B5E20;
+
+text-align:center;
+
+padding:14px 20px;
+
+font-size:14px;
+
+font-weight:600;
+
+letter-spacing:.3px;
+
+border-bottom:1px solid #C8E6C9;
+
+position:relative;
+
+z-index:10000;
+
+}
+
+.development-banner::before{
+
+content:"🚧";
+
+margin-right:8px;
+
+}
 
 /*=========================
 RESPONSIVE
@@ -765,7 +799,6 @@ height:320px;
 
 }
 
-
 .development-banner{
 
 height:auto;
@@ -782,832 +815,976 @@ text-align:center;
 
 }
 
-  /* =========================
-   DEVELOPMENT BANNER
-========================= */
-
-.development-banner{
-
-background:#E8F5E9;
-
-color:#1B5E20;
-
-text-align:center;
-
-padding:14px 20px;
-
-font-size:14px;
-
-font-weight:600;
-
-letter-spacing:.3px;
-
-border-bottom:1px solid #C8E6C9;
-
-position:relative;
-
-z-index:10000;
-
-}
-
-
-.development-banner::before{
-
-content:"🚧";
-
-margin-right:8px;
-
-}
-
-}
-
 </style>
 
 </head>
 
-  <body>
+```html
+<body>
 
-    <div class="development-banner">
+<!-- =========================
+DEVELOPMENT BANNER
+========================= -->
 
-🌿 Explore Costa Rica is currently under development.
-New destinations, travel guides and experiences are being added regularly.
+<div class="development-banner">
+
+🌿 Atlas de Costa Rica — sitio en desarrollo. Estamos construyendo y organizando la información del país.
 
 </div>
+
+
+<!-- =========================
+HEADER
+========================= -->
 
 <header class="topbar">
 
     <div class="topbar-left">
+
         <div class="brand">
-            Explore Costa Rica
+            Atlas de Costa Rica
         </div>
 
         <div class="projects-header">
-            OFFICIAL TRAVEL GUIDE
+            DIGITAL ATLAS
         </div>
+
     </div>
+
 
     <nav class="menu">
 
-        <a href="#" class="menu-link">Home</a>
+        <a href="#" class="menu-link">
+            Inicio
+        </a>
+
 
         <div class="menu-item">
 
             <button class="menu-button">
-                Nature ▼
+                Regiones ▼
             </button>
 
             <div class="dropdown">
 
-                <a href="#" class="dropdown-button">Wildlife</a>
+                <a href="#" class="dropdown-button">
+                    Valle Central
+                </a>
 
-                <a href="#" class="dropdown-button">Bird Watching</a>
+                <a href="#" class="dropdown-button">
+                    Pacífico
+                </a>
 
-                <a href="#" class="dropdown-button">Marine Life</a>
+                <a href="#" class="dropdown-button">
+                    Caribe
+                </a>
 
-                <a href="#" class="dropdown-button">Rainforests</a>
+                <a href="#" class="dropdown-button">
+                    Zona Norte
+                </a>
 
             </div>
 
         </div>
 
+
         <div class="menu-item">
+
+            <button class="menu-button">
+                Naturaleza ▼
+            </button>
+
+            <div class="dropdown">
+
+                <a href="#" class="dropdown-button">
+                    Volcanes
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Parques Nacionales
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Bosques
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Fauna
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Flora
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <button class="menu-button">
+                Costa ▼
+            </button>
+
+            <div class="dropdown">
+
+                <a href="#" class="dropdown-button">
+                    Pacífico
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Caribe
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Playas
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Islas
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <button class="menu-button">
+                Cultura ▼
+            </button>
+
+            <div class="dropdown">
+
+                <a href="#" class="dropdown-button">
+                    Pueblos
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Tradiciones
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Gastronomía
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Arte
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <button class="menu-button">
+                Historia ▼
+            </button>
+
+            <div class="dropdown">
+
+                <a href="#" class="dropdown-button">
+                    Historia Antigua
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Época Colonial
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Costa Rica Moderna
+                </a>
+
+            </div>
+
+        </div>
 
     </nav>
 
 </header>
 
+
+<!-- =========================
+MAIN
+========================= -->
+
 <main class="desktop">
+
+
+<!-- =========================
+HERO
+========================= -->
 
 <section class="hero">
 
-<div class="hero-logo-container">
+    <div class="hero-logo-container">
 
-<img
-src="costa-rica-imagen.jpg"
-class="hero-logo"
-alt="Explore Costa Rica Logo"
-loading="lazy">>
+        <img
+            src="costa-rica-imagen.jpg"
+            class="hero-logo"
+            alt="Atlas de Costa Rica"
+            loading="lazy">
 
-</div>
+    </div>
 
-<h1>
 
-Explore Costa Rica
+    <h1>
+        Atlas de Costa Rica
+    </h1>
 
-</h1>
 
-<p>
-
-Welcome to one of the most biodiverse countries on Earth.
-Discover volcanoes, tropical rainforests, Caribbean and Pacific beaches,
-national parks, incredible wildlife and unforgettable adventures.
-
-</p>
-
+    <p>
+        Explora el territorio de Costa Rica, sus regiones, paisajes,
+        ecosistemas, fauna, cultura e historia.
+    </p>
 
 </section>
+
+
+<!-- =========================
+ABOUT THE ATLAS
+========================= -->
 
 <section class="about">
 
-<h2 class="section-title">
-
-Why Visit Costa Rica?
-
-</h2>
-
-<p class="section-subtitle">
-
-Costa Rica protects nearly thirty percent of its territory through national
-parks and biological reserves. Whether you dream of hiking volcanoes,
-watching sea turtles, relaxing on white-sand beaches or exploring tropical
-rainforests, every journey becomes an unforgettable experience.
-
-</p>
-
-<div class="about-card">
-
-<p>
-
-Costa Rica is internationally recognized as one of the world's premier
-ecotourism destinations. Despite covering only a tiny fraction of the
-planet's land area, it shelters an extraordinary percentage of global
-biodiversity.
-
-Visitors can experience active volcanoes, cloud forests, pristine beaches,
-mangroves, coral reefs, rivers and mountain ranges all within a few hours of
-travel.
-
-The country's commitment to conservation, sustainability and renewable
-energy has made it a model for responsible tourism while offering visitors
-safe, authentic and memorable adventures.
-
-</p>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="section-title">
-
-Costa Rica at a Glance
-
-</h2>
-
-<p class="section-subtitle">
-
-Some incredible facts that make Costa Rica one of the most fascinating travel
-destinations in the world.
-
-</p>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>🌿 6%</h3>
-
-<p>
-
-Home to nearly six percent of the world's biodiversity.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🌋 30+</h3>
-
-<p>
-
-National Parks and protected biological reserves.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🦥 900+</h3>
-
-<p>
-
-Bird species and extraordinary wildlife.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🏖 Two Oceans</h3>
-
-<p>
-
-Pacific Ocean and Caribbean Sea in a single country.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="section-title">
-
-Discover Costa Rica
-
-</h2>
-
-<p class="section-subtitle">
-
-Choose your next adventure through some of the country's most spectacular
-natural attractions.
-
-</p>
-
-<div class="cards">
-
-<div class="card">
-
-<img src="imagen/arenal-volcano.jpg" alt="Arenal Volcano" loading="lazy">
-<h3>Volcanoes</h3>
-
-<p>
-
-Discover majestic volcanoes including Arenal, Poás, Irazú and Rincón de la
-Vieja.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="imagen/costa-rica-beach.jpg" alt="Costa Rica Beaches" loading="lazy">
-
-<h3>Beaches</h3>
-
-<p>
-
-From Caribbean paradise to Pacific sunsets, explore hundreds of spectacular
-beaches.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<img 
-src="images/wildlife/sea-turtle.jpg"
-alt="Green sea turtle swimming in the tropical waters of Costa Rica, showcasing its brown and green shell"
-loading="lazy">
-
-<h3>Wildlife</h3>
-
-<p>
-
-Meet sloths, monkeys, toucans, scarlet macaws, sea turtles and countless
-other species.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="imagen/rain-forest-costa-rica.jpg" alt="Rainforest">
-
-<h3>Rainforests</h3>
-
-<p>
-
-Walk through lush tropical forests filled with waterfalls, rivers and exotic
-plants.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-  <section>
-
     <h2 class="section-title">
-        Unforgettable Experiences
+        Costa Rica
     </h2>
 
+
     <p class="section-subtitle">
-        Every region of Costa Rica offers unique adventures, from volcanoes and
-        cloud forests to world-class surfing and wildlife encounters.
+
+        Un país pequeño en territorio, pero extraordinariamente diverso
+        en paisajes, ecosistemas, pueblos y patrimonio.
+
     </p>
 
-    <div class="cards">
 
-        <div class="card">
+    <div class="about-card">
 
-            <img src="imagen/ziplining.jpg"
-                 alt="Zipline Adventure">
+        <p>
 
-            <h3>Ziplining</h3>
+            Costa Rica se encuentra entre el océano Pacífico y el mar Caribe
+            y posee una gran variedad de paisajes y ecosistemas.
 
-            <p>
-                Fly above the rainforest canopy and experience breathtaking
-                panoramic views.
-            </p>
+            Su territorio incluye cordilleras volcánicas, montañas,
+            bosques tropicales, llanuras, ríos, humedales, costas e islas.
 
-        </div>
+            Este atlas reúne información sobre los diferentes elementos
+            naturales, geográficos, culturales e históricos que forman
+            parte del país.
 
-        <div class="card">
-
-            <img src="imagen/surf-costa-rica-beach.jpg"
-                 alt="Surfing">
-
-            <h3>Surfing</h3>
-
-            <p>
-                Costa Rica is home to some of the world's best surf beaches
-                for beginners and professionals alike.
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <img src="images/rafting.jpg"
-                 alt="White Water Rafting">
-
-            <h3>Rafting</h3>
-
-            <p>
-                Navigate exciting rivers through lush tropical landscapes
-                with experienced local guides.
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <img src="imagen/hiking-costa-rica.jpg"
-                 alt="Hiking">
-
-            <h3>Hiking</h3>
-
-            <p>
-                Explore volcanoes, waterfalls and cloud forests through
-                hundreds of scenic trails.
-            </p>
-
-        </div>
+        </p>
 
     </div>
 
 </section>
 
 
+<!-- =========================
+AT A GLANCE
+========================= -->
+
 <section>
 
-<h2 class="section-title">
+    <h2 class="section-title">
+        Costa Rica en cifras
+    </h2>
 
-Featured National Parks
 
-</h2>
+    <p class="section-subtitle">
 
-<p class="section-subtitle">
+        Algunos datos que ayudan a comprender la diversidad del territorio
+        costarricense.
 
-Costa Rica protects nearly one third of its territory through national parks
-and biological reserves, making it one of the world's leading ecotourism
-destinations.
+    </p>
 
-</p>
 
-<div class="cards">
+    <div class="cards">
 
-<div class="card">
 
-<img src="images/parks/manuel-antonio.jpg"
-alt="Manuel Antonio National Park">
+        <div class="card">
 
-<h3>
+            <h3>🌿 Biodiversidad</h3>
 
-Manuel Antonio
+            <p>
+                Costa Rica alberga una extraordinaria diversidad de especies
+                animales y vegetales en relación con su territorio.
+            </p>
 
-</h3>
+        </div>
 
-<p>
 
-White-sand beaches, rainforest trails and abundant wildlife including sloths,
-capuchin monkeys and toucans.
+        <div class="card">
 
-</p>
+            <h3>🌋 Volcanes</h3>
 
-</div>
+            <p>
+                Las cordilleras volcánicas han contribuido a formar gran parte
+                de los paisajes y ecosistemas del país.
+            </p>
 
-<div class="card">
+        </div>
 
-<img src="images/parks/corcovado.jpg"
-alt="Corcovado National Park">
 
-<h3>
+        <div class="card">
 
-Corcovado
+            <h3>🦥 Fauna</h3>
 
-</h3>
+            <p>
+                El territorio costarricense alberga una gran variedad de
+                mamíferos, aves, reptiles, anfibios y especies marinas.
+            </p>
 
-<p>
+        </div>
 
-Often described as one of the most biologically intense places on Earth,
-home to jaguars, tapirs and scarlet macaws.
 
-</p>
+        <div class="card">
 
-</div>
+            <h3>🌊 Dos costas</h3>
 
-<div class="card">
+            <p>
+                Costa Rica posee costas tanto en el océano Pacífico como
+                en el mar Caribe.
+            </p>
 
-<img src="images/parks/tortuguero.jpg"
-alt="Tortuguero National Park">
+        </div>
 
-<h3>
 
-Tortuguero
-
-</h3>
-
-<p>
-
-Explore canals surrounded by rainforest and witness one of the world's most
-important sea turtle nesting sites.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="images/parks/monteverde.jpg"
-alt="Monteverde Cloud Forest">
-
-<h3>
-
-Monteverde
-
-</h3>
-
-<p>
-
-Walk above the clouds through hanging bridges and discover extraordinary
-plants and wildlife.
-
-</p>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
+<!-- =========================
+EXPLORE THE ATLAS
+========================= -->
+
 <section>
 
-<h2 class="section-title">
+    <h2 class="section-title">
+        Explorar el Atlas
+    </h2>
 
-The Great Volcanoes
 
-</h2>
+    <p class="section-subtitle">
 
-<p class="section-subtitle">
+        Conoce algunos de los principales elementos naturales y geográficos
+        de Costa Rica.
 
-Costa Rica's volcanic mountain ranges have shaped the country's landscapes,
-ecosystems and geothermal wonders.
+    </p>
 
-</p>
 
-<div class="cards">
+    <div class="cards">
 
-<div class="card">
 
-<img src="images/volcanoes/arenal.jpg"
-alt="Arenal Volcano">
+        <div class="card">
 
-<h3>
+            <img
+                src="imagen/arenal-volcano.jpg"
+                alt="Volcán Arenal"
+                loading="lazy">
 
-Arenal Volcano
+            <h3>
+                Volcanes
+            </h3>
 
-</h3>
+            <p>
+                Arenal, Poás, Irazú, Rincón de la Vieja y otros volcanes
+                forman parte del paisaje geológico de Costa Rica.
+            </p>
 
-<p>
+        </div>
 
-One of the world's most iconic volcanoes, surrounded by hot springs,
-rainforest and adventure activities.
 
-</p>
+        <div class="card">
 
-</div>
+            <img
+                src="imagen/costa-rica-beach.jpg"
+                alt="Costa de Costa Rica"
+                loading="lazy">
 
-<div class="card">
+            <h3>
+                Costa
+            </h3>
 
-<img src="images/volcanoes/poas.jpg"
-alt="Poas Volcano">
+            <p>
+                Explora las costas del Pacífico y el Caribe, sus playas,
+                islas y ecosistemas marinos.
+            </p>
 
-<h3>
+        </div>
 
-Poás Volcano
 
-</h3>
+        <div class="card">
 
-<p>
+            <img
+                src="images/wildlife/sea-turtle.jpg"
+                alt="Tortuga marina en Costa Rica"
+                loading="lazy">
 
-Visit one of the largest active volcanic craters on the planet, famous for
-its turquoise acidic lake.
+            <h3>
+                Fauna
+            </h3>
 
-</p>
+            <p>
+                Conoce algunas de las especies que habitan los diferentes
+                ecosistemas del país.
+            </p>
 
-</div>
+        </div>
 
-<div class="card">
 
-<img src="images/volcanoes/irazu.jpg"
-alt="Irazu Volcano">
+        <div class="card">
 
-<h3>
+            <img
+                src="imagen/rain-forest-costa-rica.jpg"
+                alt="Bosque tropical de Costa Rica"
+                loading="lazy">
 
-Irazú Volcano
+            <h3>
+                Bosques
+            </h3>
 
-</h3>
+            <p>
+                Desde bosques tropicales hasta bosques nubosos, descubre
+                algunos de los principales ecosistemas terrestres del país.
+            </p>
 
-<p>
+        </div>
 
-On clear days visitors can admire both the Pacific Ocean and Caribbean Sea
-from the summit.
 
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="images/volcanoes/rincon.jpg"
-alt="Rincon de la Vieja">
-
-<h3>
-
-Rincón de la Vieja
-
-</h3>
-
-<p>
-
-Discover bubbling mud pots, waterfalls, volcanic fumaroles and beautiful
-hiking trails.
-
-</p>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
+
+<!-- =========================
+NATIONAL PARKS
+========================= -->
+
+<section>
+
+    <h2 class="section-title">
+        Parques Nacionales
+    </h2>
+
+
+    <p class="section-subtitle">
+
+        Las áreas protegidas forman una parte importante del patrimonio
+        natural de Costa Rica.
+
+    </p>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <img
+                src="images/parks/manuel-antonio.jpg"
+                alt="Parque Nacional Manuel Antonio">
+
+            <h3>
+                Manuel Antonio
+            </h3>
+
+            <p>
+                Un área protegida donde se encuentran bosques tropicales,
+                playas y una gran variedad de especies.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <img
+                src="images/parks/corcovado.jpg"
+                alt="Parque Nacional Corcovado">
+
+            <h3>
+                Corcovado
+            </h3>
+
+            <p>
+                Una de las áreas naturales más importantes de la península
+                de Osa y uno de los ecosistemas más diversos del país.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <img
+                src="images/parks/tortuguero.jpg"
+                alt="Parque Nacional Tortuguero">
+
+            <h3>
+                Tortuguero
+            </h3>
+
+            <p>
+                Una región de canales, bosques y humedales ubicada en la
+                costa del Caribe.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <img
+                src="images/parks/monteverde.jpg"
+                alt="Bosque Nuboso de Monteverde">
+
+            <h3>
+                Monteverde
+            </h3>
+
+            <p>
+                Una región montañosa reconocida por sus bosques nubosos
+                y su extraordinaria biodiversidad.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+VOLCANOES
+========================= -->
+
+<section>
+
+    <h2 class="section-title">
+        Volcanes
+    </h2>
+
+
+    <p class="section-subtitle">
+
+        Las formaciones volcánicas han influido en la geografía,
+        los ecosistemas y los paisajes de Costa Rica.
+
+    </p>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <img
+                src="images/volcanoes/arenal.jpg"
+                alt="Volcán Arenal">
+
+            <h3>
+                Arenal
+            </h3>
+
+            <p>
+                Uno de los volcanes más reconocibles de Costa Rica,
+                ubicado en la región norte del país.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <img
+                src="images/volcanoes/poas.jpg"
+                alt="Volcán Poás">
+
+            <h3>
+                Poás
+            </h3>
+
+            <p>
+                Un volcán activo conocido por su gran cráter y
+                sus características geológicas.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <img
+                src="images/volcanoes/irazu.jpg"
+                alt="Volcán Irazú">
+
+            <h3>
+                Irazú
+            </h3>
+
+            <p>
+                El volcán más alto de Costa Rica, ubicado en la
+                Cordillera Central.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <img
+                src="images/volcanoes/rincon.jpg"
+                alt="Volcán Rincón de la Vieja">
+
+            <h3>
+                Rincón de la Vieja
+            </h3>
+
+            <p>
+                Un complejo volcánico caracterizado por fumarolas,
+                fuentes termales y actividad geotérmica.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+GALLERY
+========================= -->
 
 <section class="gallery">
 
-<h2 class="section-title">
+    <h2 class="section-title">
+        Galería
+    </h2>
 
-Costa Rica Gallery
 
-</h2>
+    <p class="section-subtitle">
 
-<p class="section-subtitle">
+        Una muestra visual de los paisajes y ecosistemas que forman
+        parte del Atlas.
 
-A glimpse of the incredible landscapes waiting for you.
+    </p>
 
-</p>
 
-<div class="gallery-track">
+    <div class="gallery-track">
 
-<img src="imagen/rain-forest-costa-rica.jpg" alt="Rainforest">
+        <img
+            src="imagen/rain-forest-costa-rica.jpg"
+            alt="Bosque tropical">
 
-<img src="imagen/surf-costa-rica-beach.jpg" alt="Beach">
+        <img
+            src="imagen/surf-costa-rica-beach.jpg"
+            alt="Costa del Pacífico">
 
-<img src="imagen/arenal-volcano.jpg" alt="Volcano">
+        <img
+            src="imagen/arenal-volcano.jpg"
+            alt="Volcán Arenal">
 
-<img src="imagen/toucan.jpg" alt="Toucan">
+        <img
+            src="imagen/toucan.jpg"
+            alt="Tucán">
 
-<img src="imagen/waterfall.jpg" alt="Waterfall">
+        <img
+            src="imagen/waterfall.jpg"
+            alt="Catarata">
 
-<img src="imagen/sloth-from-costa-rica.jpg" alt="Sloth">
+        <img
+            src="imagen/sloth-from-costa-rica.jpg"
+            alt="Perezoso">
 
-<img src="imagen/cloud-forest.jpg" alt="Cloud Forest">
+        <img
+            src="imagen/cloud-forest.jpg"
+            alt="Bosque nuboso">
 
-<img src="imagen/sunset.jpg" alt="Sunset">
+        <img
+            src="imagen/sunset.jpg"
+            alt="Paisaje al atardecer">
 
-</div>
-
-</section>
-
-  <section>
-
-<h2 class="section-title">
-
-The Best Beaches
-
-</h2>
-
-<p class="section-subtitle">
-
-Whether you seek surfing, relaxation or tropical scenery, Costa Rica offers
-some of the world's most spectacular coastlines.
-
-</p>
-
-<div class="cards">
-
-<div class="card">
-
-<img src="images/beaches/tamarindo.jpg" alt="Tamarindo Beach">
-
-<h3>Tamarindo</h3>
-
-<p>
-
-One of Costa Rica's most famous beach towns, perfect for surfing,
-restaurants and nightlife.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="images/beaches/conchal.jpg" alt="Playa Conchal">
-
-<h3>Playa Conchal</h3>
-
-<p>
-
-Crystal-clear waters and white shells make this beach one of the country's
-most beautiful destinations.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="images/beaches/santa-teresa.jpg" alt="Santa Teresa">
-
-<h3>Santa Teresa</h3>
-
-<p>
-
-A paradise for surfers, digital nomads and visitors looking for spectacular
-Pacific sunsets.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="images/beaches/puerto-viejo.jpg" alt="Puerto Viejo">
-
-<h3>Puerto Viejo</h3>
-
-<p>
-
-Experience the Caribbean side of Costa Rica with vibrant culture, wildlife
-and beautiful beaches.
-
-</p>
-
-</div>
-
-</div>
+    </div>
 
 </section>
+
+
+<!-- =========================
+BEACHES
+========================= -->
 
 <section>
 
-<h2 class="section-title">
+    <h2 class="section-title">
+        Playas
+    </h2>
 
-Extraordinary Wildlife
 
-</h2>
+    <p class="section-subtitle">
 
-<p class="section-subtitle">
+        Las costas del Pacífico y el Caribe presentan paisajes,
+        ecosistemas y comunidades diferentes.
 
-Costa Rica is home to thousands of fascinating species that thrive in its
-protected ecosystems.
+    </p>
 
-</p>
 
-<div class="cards">
+    <div class="cards">
 
-<div class="card">
 
-<img src="images/wildlife/sloth.jpg" alt="Sloth">
+        <div class="card">
 
-<h3>Sloths</h3>
+            <img
+                src="images/beaches/tamarindo.jpg"
+                alt="Playa Tamarindo">
 
-<p>
+            <h3>
+                Tamarindo
+            </h3>
 
-Meet Costa Rica's most beloved animal while exploring the rainforest.
+            <p>
+                Una localidad costera del Pacífico conocida por sus
+                playas y ecosistemas costeros.
+            </p>
 
-</p>
+        </div>
 
-</div>
 
-<div class="card">
+        <div class="card">
 
-<img src="images/wildlife/toucan.jpg" alt="Toucan">
+            <img
+                src="images/beaches/conchal.jpg"
+                alt="Playa Conchal">
 
-<h3>Toucans</h3>
+            <h3>
+                Playa Conchal
+            </h3>
 
-<p>
+            <p>
+                Una playa del Pacífico caracterizada por su costa
+                formada en gran parte por fragmentos de conchas.
+            </p>
 
-Their colorful beaks have become one of the country's most recognizable
-symbols.
+        </div>
 
-</p>
 
-</div>
+        <div class="card">
 
-<div class="card">
+            <img
+                src="images/beaches/santa-teresa.jpg"
+                alt="Santa Teresa">
 
-<img src="images/wildlife/macaw.jpg" alt="Scarlet Macaw">
+            <h3>
+                Santa Teresa
+            </h3>
 
-<h3>Scarlet Macaws</h3>
+            <p>
+                Una localidad costera situada en la península de Nicoya,
+                frente al océano Pacífico.
+            </p>
 
-<p>
+        </div>
 
-These magnificent birds fill Costa Rica's skies with brilliant colors.
 
-</p>
+        <div class="card">
 
-</div>
+            <img
+                src="images/beaches/puerto-viejo.jpg"
+                alt="Puerto Viejo">
 
-<div class="card">
+            <h3>
+                Puerto Viejo
+            </h3>
 
-<img src="images/wildlife/turtle.jpg" alt="Sea Turtle">
+            <p>
+                Una localidad de la costa Caribe conocida por sus
+                paisajes costeros y diversidad cultural.
+            </p>
 
-<h3>Sea Turtles</h3>
+        </div>
 
-<p>
 
-Witness unforgettable nesting events along both the Caribbean and Pacific
-coasts.
-
-</p>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
+
+<!-- =========================
+WILDLIFE
+========================= -->
+
+<section>
+
+    <h2 class="section-title">
+        Fauna
+    </h2>
+
+
+    <p class="section-subtitle">
+
+        Algunas de las especies que forman parte de la diversidad
+        biológica de Costa Rica.
+
+    </p>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <img
+                src="images/wildlife/sloth.jpg"
+                alt="Perezoso">
+
+            <h3>
+                Perezosos
+            </h3>
+
+            <p>
+                Mamíferos arborícolas que habitan diferentes zonas
+                boscosas del país.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <img
+                src="images/wildlife/toucan.jpg"
+                alt="Tucán">
+
+            <h3>
+                Tucanes
+            </h3>
+
+            <p>
+                Aves tropicales reconocibles por sus grandes y
+                coloridos picos.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <img
+                src="images/wildlife/macaw.jpg"
+                alt="Guacamaya roja">
+
+            <h3>
+                Guacamayas rojas
+            </h3>
+
+            <p>
+                Grandes aves de colores intensos que habitan
+                determinadas regiones del país.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <img
+                src="images/wildlife/turtle.jpg"
+                alt="Tortuga marina">
+
+            <h3>
+                Tortugas marinas
+            </h3>
+
+            <p>
+                Varias especies de tortugas marinas utilizan las
+                costas de Costa Rica para alimentarse y reproducirse.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================
+FOOTER
+========================= -->
+
 <footer class="site-footer">
 
-<div class="footer-inner">
+    <div class="footer-inner">
 
-<div class="footer-brand">
+        <div class="footer-brand">
 
-<h3>
+            <h3>
+                Atlas de Costa Rica
+            </h3>
 
-Explore Costa Rica
+            <p>
+                Un proyecto digital dedicado a explorar y organizar
+                información sobre Costa Rica.
+            </p>
 
-</h3>
+        </div>
 
-<p>
 
-Your complete guide to discovering the natural wonders of Costa Rica.
+        <div class="footer-links">
 
-</p>
+            <a href="#">
+                Inicio
+            </a>
 
-</div>
+            <a href="#">
+                Regiones
+            </a>
 
-</div>
+            <a href="#">
+                Naturaleza
+            </a>
 
-<div style="text-align:center;margin-top:60px;border-top:1px solid rgba(255,255,255,.15);padding-top:25px;">
+            <a href="#">
+                Costa
+            </a>
 
-<p>
+            <a href="#">
+                Cultura
+            </a>
 
-© 2026 Explore Costa Rica · Discover Nature, Adventure & Sustainability
+            <a href="#">
+                Historia
+            </a>
 
-</p>
+        </div>
 
-</div>
+    </div>
+
+
+    <div style="text-align:center;margin-top:60px;border-top:1px solid rgba(255,255,255,.15);padding-top:25px;">
+
+        <p>
+            © 2026 Atlas de Costa Rica
+        </p>
+
+    </div>
 
 </footer>
+
 
 </body>
 
 </html>
+```
